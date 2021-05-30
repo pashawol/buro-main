@@ -1,0 +1,487 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		title Бюро | Gifts & Events
+		link(rel='icon' href='img/favicon.ico')
+		link(rel='preconnect' href='https://fonts.gstatic.com')
+		link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap' rel='stylesheet')
+		link(rel='stylesheet' href='css/index.css')
+		link(rel='stylesheet' href='css/custom.css')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		meta(name='description' content='')
+	body
+		ul.mob-menu
+			li
+				a(href='how.html')
+					span Как заказать
+			li
+				a(href='delivery.html')
+					span Доставка и оплата
+			li
+				a(href='about.html')
+					span О компании
+			li
+				a(href='reviews.html')
+					span Отзывы
+			li
+				a(href='contacts.html')
+					span Контакты
+		.top-line-section
+			.wrapper
+				.top-line-wrap
+					.left
+						a.logo(href='index.html')
+							img(src='img/logo.svg' alt='')
+						.top-contacts
+							a(href='tel:+74999388987')
+								span +7 (499) 938 89 87
+							a(href='mailto:info@bureau.gifts')
+								span info@bureau.gifts
+					.right
+						ul.top-menu
+							li
+								a(href='how.html')
+									span Как заказать
+							li
+								a(href='delivery.html')
+									span Доставка и оплата
+							li
+								a(href='about.html')
+									span О компании
+							li
+								a(href='reviews.html')
+									span Отзывы
+							li
+								a(href='contacts.html')
+									span Контакты
+						.burger
+							.line
+							.line
+							.line
+		.menu-section
+			.wrapper
+				.menu-wrap
+					.catalog-menu-wrap
+						a.top-catalog-button(href='catalog.html')
+							span.catalog-burger
+								span.line
+								span.line
+								span.line
+							span.text Каталог
+						ul.catalog-menu
+							li
+								a(href="#") смотреть все товары
+							mixin li(t)
+								li.has-child
+									a(href="#")= t
+									ul.catalog-menu-sub
+										mixin li-sub(t)
+											li
+												a(href="#")= t 
+										+li-sub(`праздники`)
+										+li-sub(`одежда и текстиль`)
+										+li-sub(`подпрочные наборы`)
+										+li-sub(`товары для дома`)
+										+li-sub(`электроника`)
+										+li-sub(`посуда`)
+										+li-sub(`ручки`)
+										+li-sub(`полиграфия и печать`)
+										+li-sub(`награды`)
+										+li-sub(`отдых`)
+										+li-sub(`упаковка`)
+										+li-sub(`ежедневники и блокноты`)
+										+li-sub(`сумки и рюкзаки`) 
+										+li-sub(`зонты`) 
+										+li-sub(`новый год`) 
+										+li-sub(`сувениры на заказ`)  
+							+li(`праздники`)
+							+li(`одежда и текстиль`)
+							+li(`подпрочные наборы`)
+							+li(`товары для дома`)
+							+li(`электроника`)
+							+li(`посуда`)
+							+li(`ручки`)
+							+li(`полиграфия и печать`)
+							+li(`награды`)
+							+li(`отдых`)
+							+li(`упаковка`)
+							+li(`ежедневники и блокноты`)
+							+li(`сумки и рюкзаки`) 
+							+li(`зонты`) 
+							+li(`новый год`) 
+							+li(`сувениры на заказ`) 
+					form.top-search(action='#')
+						h4 Фильтр
+						.input
+							input(type='text' name='top-search' placeholder='Поиск')
+							img(src='img/top-search-icon.svg' alt='')
+						button(type='submit') Найти
+					a.top-cart(href='cart.html')
+						img(src='img/top-cart.svg' alt='')
+						span Корзина
+		header
+			.wrapper
+				h1 Корпоративные подарки и сувениры
+				.main-banner
+					.main-banner-item(style="background-image: url('img/banner-bg1.jpg');")
+						.inner
+							h4 Велком-пак
+							p
+								| Бла-бла-бла о том какие мы классные. Мы супер и вообще лучше всех! Что такое велком-пак и зачем он нужен. Примеры наших работ.
+					.main-banner-item(style="background-image: url('img/banner-bg1.jpg');")
+						.inner
+							h4 Велком-пак 1
+							p
+								| Бла-бла-бла о том какие мы классные. Мы супер и вообще лучше всех! Что такое велком-пак и зачем он нужен. Примеры наших работ. Бла-бла-бла о том какие мы классные.
+					.main-banner-item(style="background-image: url('img/banner-bg1.jpg');")
+						.inner
+							h4 Велком-пак 2
+							p Бла-бла-бла о том какие мы классные.
+		section.main-categories-section
+			.wrapper
+				h2 Категории товаров
+				.main-categ-wrap
+					.main-categ-item
+						span.img
+							img(src='img/cat1.svg' alt='')
+						h4 Праздники
+						.links
+							a(href='catalog.html') 8 марта
+							a(href='catalog.html') День Победы 9 мая
+							a(href='catalog.html') День медика
+					.main-categ-item
+						span.img
+							img(src='img/cat2.svg' alt='')
+						h4 Одежда и текстиль
+						.links
+							a(href='catalog.html') Футболки
+							a(href='catalog.html') Рубашки поло
+							a(href='catalog.html') Футболки для промо
+					.main-categ-item
+						span.img
+							img(src='img/cat3.svg' alt='')
+						h4 Подарочные наборы
+						.links
+							a(href='catalog.html') Бизнес наборы
+							a(href='catalog.html') Дорожные наборы
+							a(href='catalog.html') Наборы с термокружками
+					.main-categ-item
+						span.img
+							img(src='img/cat4.svg' alt='')
+						h4 Товары для дома
+						.links
+							a(href='catalog.html') Пледы
+							a(href='catalog.html') Домашний текстиль
+							a(href='catalog.html') Полотенца
+					.main-categ-item
+						span.img
+							img(src='img/cat5.svg' alt='')
+						h4 Электроника
+						.links
+							a(href='catalog.html') Флешки
+							a(href='catalog.html') Внешние аккумуляторы
+							a(href='catalog.html') Колонки
+					.main-categ-item
+						span.img
+							img(src='img/cat6.svg' alt='')
+						h4 Посуда
+						.links
+							a(href='catalog.html') Кружки
+							a(href='catalog.html') Термокружки и термосы
+							a(href='catalog.html') Чайные пары
+					.main-categ-item
+						span.img
+							img(src='img/cat7.svg' alt='')
+						h4 Ручки
+						.links
+							a(href='catalog.html') Пластиковые ручки
+							a(href='catalog.html') Металлические ручки
+							a(href='catalog.html') Деревянные ручки
+					.main-categ-item
+						span.img
+							img(src='img/cat8.svg' alt='')
+						h4 Полиграфия и печать
+						.links
+							a(href='catalog.html') Настенные календари
+							a(href='catalog.html') Настольные календари
+							a(href='catalog.html') Оригинальные календари
+					.main-categ-item
+						span.img
+							img(src='img/cat9.svg' alt='')
+						h4 Награды
+						.links
+							a(href='catalog.html') Наградные стелы
+							a(href='catalog.html') Палетки и панно
+							a(href='catalog.html') Кубки и медали
+					.main-categ-item
+						span.img
+							img(src='img/cat10.svg' alt='')
+						h4 Отдых
+						.links
+							a(href='catalog.html') Для путешествий
+							a(href='catalog.html') Автомобильные аксессуары
+							a(href='catalog.html') Дорожные подушки
+					.main-categ-item
+						span.img
+							img(src='img/cat11.svg' alt='')
+						h4 Упаковка
+						.links
+							a(href='catalog.html') Подарочная упаковка
+							a(href='catalog.html') Подарочные пакеты
+							a(href='catalog.html') Подарочные коробки
+					.main-categ-item
+						span.img
+							img(src='img/cat12.svg' alt='')
+						h4 Ежедневники и блокноты
+						.links
+							a(href='catalog.html') Ежедневники
+							a(href='catalog.html') Оригинальные ежедневники
+							a(href='catalog.html') Блокноты
+					.main-categ-item
+						span.img
+							img(src='img/cat13.svg' alt='')
+						h4 Сумки и рюкзаки
+						.links
+							a(href='catalog.html') Сумки
+							a(href='catalog.html') Термосумки
+							a(href='catalog.html') Рюкзаки
+					.main-categ-item
+						span.img
+							img(src='img/cat14.svg' alt='')
+						h4 Зонты
+						.links
+							a(href='catalog.html') Складные зонты
+							a(href='catalog.html') Зонты-трости
+							a(href='catalog.html') Плащи
+					.main-categ-item
+						span.img
+							img(src='img/cat15.svg' alt='')
+						h4 Новый год
+						.links
+							a(href='catalog.html') Елочные украшения
+							a(href='catalog.html') Подарочные пакеты
+							a(href='catalog.html') Сладкие подарки
+					.main-categ-item
+						span.img
+							img(src='img/cat16.svg' alt='')
+						h4 Сувениры на заказ
+						.links
+							a(href='catalog.html') Подарочные наборы
+							a(href='catalog.html') Оригинальные подарки
+							a(href='catalog.html') Примеры заказов
+		section.price-search-section
+			.wrapper
+				form.price-search-wrap(action='#')
+					h4 Поиск по цене
+					.price-search-center
+						.price-search-item
+							p Количество
+							input(type='text' name='price-search-amount' placeholder='Шт')
+						.price-search-item
+							p Цена
+							input(type='text' name='price-search-from' placeholder='От')
+							input(type='text' name='price-search-to' placeholder='До')
+					button.button(type='submit') Найти
+		.partners-section
+			.wrapper
+				.partners-wrap
+					.partners-item
+						img(src='img/partner1.svg' alt='')
+					.partners-item
+						img(src='img/partner2.svg' alt='')
+					.partners-item
+						img(src='img/partner3.svg' alt='')
+					.partners-item
+						img(src='img/partner4.svg' alt='')
+					.partners-item
+						img(src='img/partner5.svg' alt='')
+					.partners-item
+						img(src='img/partner6.svg' alt='')
+		section.main-advan-section
+			.wrapper
+				h2 Наши преимущества
+				.main-advan-wrap
+					.main-advan-item
+						h4 Логистика
+						p
+							| Бла-бла-бла о том какие мы 
+							br
+							| классные. Мы супер и лучше всех!
+						img(src='img/main-advan1.jpg' alt='')
+					.main-advan-item
+						h4 Логистика
+						p
+							| Никакого брака и обмана 
+							br
+							| клиентов! Мы никогда 
+							br
+							| не проебемся
+						img(src='img/main-advan2.jpg' alt='')
+					.main-advan-item.blue
+						h4 Персонализация
+						p
+							| Нанесем на продукцию даже 
+							br
+							| ваш самый уродливый логотип! 
+							br
+							| Поиграем со шрифтами!
+						img(src='img/main-advan3.jpg' alt='')
+					.main-advan-item
+						h4 Упаковка
+						p
+							| Придумаем и напечатаем самые 
+							br
+							| пиздатые пакеты и коробочки
+						img(src='img/main-advan4.jpg' alt='')
+					.main-advan-item.blue
+						h4 Наборы на заказ
+						p
+							| Ваши самые смелые 
+							br
+							| фантазии!
+						img(src='img/main-advan5.jpg' alt='')
+		section.similar-section
+			.wrapper
+				h2 Вам может понравиться
+				.similar-big-wrap
+					img.prev(src='img/similar-prev.svg' alt='')
+					.similar-wrap
+						.item
+							a.img(href='item.html')
+								img(src='img/item1.jpg' alt='')
+							p.price
+								a(href='item.html') 2 500 руб.
+							p.description
+								a(href='item.html') Набор  «Plastglass»: 4 стакана с открывалкой
+							.item-bottom
+								.colors
+									a(href='#')
+										img(src='img/colors.jpg' alt='')
+									a(href='#')
+										img(src='img/colors.jpg' alt='')
+									a(href='#')
+										img(src='img/colors.jpg' alt='')
+								.buttons
+									a(href='#') Тираж
+									a(href='#') В корзину
+						.item
+							a.img(href='item.html')
+								img(src='img/item2.jpg' alt='')
+							p.price
+								a(href='item.html') 250 руб.
+							p.description
+								a(href='item.html') Брелок-держатель для наушников «Herring»
+							.item-bottom
+								.buttons
+									a(href='#') Тираж
+									a(href='#') В корзину
+						.item
+							a.img(href='item.html')
+								img(src='img/item3.jpg' alt='')
+							p.price
+								a(href='item.html') 750 руб.
+							p.description
+								a(href='item.html') Подушка надувная «Сеньос»
+							.item-bottom
+								.colors
+									a(href='#')
+										img(src='img/colors.jpg' alt='')
+									a(href='#')
+										img(src='img/colors.jpg' alt='')
+								.buttons
+									a(href='#') Тираж
+									a(href='#') В корзину
+						.item
+							a.img(href='item.html')
+								img(src='img/item4.jpg' alt='')
+							p.price
+								a(href='item.html') 2 500 руб.
+							p.description
+								a(href='item.html') Набор  «Plastglass»: 4 стакана с открывалкой
+							.item-bottom
+								.colors
+									a(href='#')
+										img(src='img/colors.jpg' alt='')
+									a(href='#')
+										img(src='img/colors.jpg' alt='')
+									a(href='#')
+										img(src='img/colors.jpg' alt='')
+								.buttons
+									a(href='#') Тираж
+									a(href='#') В корзину
+						.item
+							a.img(href='item.html')
+								img(src='img/item2.jpg' alt='')
+							p.price
+								a(href='item.html') 2 500 руб.
+							p.description
+								a(href='item.html') Набор  «Plastglass»: 4 стакана с открывалкой
+							.item-bottom
+								.buttons
+									a(href='#') Тираж
+									a(href='#') В корзину
+						.item
+							a.img(href='item.html')
+								img(src='img/item3.jpg' alt='')
+							p.price
+								a(href='item.html') 750 руб.
+							p.description
+								a(href='item.html') Подушка надувная «Сеньос»
+							.item-bottom
+								.colors
+									a(href='#')
+										img(src='img/colors.jpg' alt='')
+									a(href='#')
+										img(src='img/colors.jpg' alt='')
+								.buttons
+									a(href='#') Тираж
+									a(href='#') В корзину
+					img.next(src='img/similar-next.svg' alt='')
+		footer
+			.wrapper
+				.footer-wrap
+					.footer-left
+						img(src='img/logo.svg' alt='')
+						.footer-info
+							p
+								a(href='policy.html') Политика конфиденциальности
+							p Все права защищены / 2021
+					.footer-right
+						.footer-item
+							h4 Адрес и контакты
+							p
+								| Малая Семеновская, 11/2 
+								br
+								| строение 7, 107023
+							p
+								a(href='tel:+74954143084') +7 495 414 30 84
+							p
+								a(href='mailto:info@bureau.gifts') info@bureau.gifts
+						.footer-item
+							h4 Помощь
+							ul
+								li
+									a(href='how.html') Как заказать
+								li
+									a(href='delivery.html') Оплата и гарантии
+								li
+									a(href='delivery.html') Доставка
+								li
+									a(href='#') Нанесение логотипа
+						.footer-item
+							h4 Информация
+							ul
+								li
+									a(href='about.html') О нас
+								li
+									a(href='contacts.html') Контакты
+								li
+									a(href='works.html') Портфолио
+								li
+									a.no-redirect(href='#') Обратная связь
+		// JavaScript section
+		script(src='js/js-libs.min.js')
+		script(src='js/custom.js')
+		script(src='js/catalog-menu.js')

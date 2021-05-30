@@ -1,0 +1,125 @@
+:root {
+  --animate-delay: 1.2s;
+  --fontSizeBase: 16px;
+}
+
+.catalog-menu-wrap {
+  position: relative;
+}
+@media screen and (min-width: 960px) {
+  .catalog-menu-wrap .top-catalog-button {
+    pointer-events: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  .catalog-menu-wrap {
+    width: 50%;
+  }
+  .catalog-menu-wrap .top-catalog-button {
+    width: 100%;
+  }
+}
+.catalog-menu-wrap:hover .catalog-menu {
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible;
+}
+
+.catalog-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: none;
+  z-index: 1000;
+  width: 345px;
+  -webkit-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.13);
+          box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.13);
+  background-color: #f2f2f2;
+}
+@media screen and (min-width: 960px) {
+  .catalog-menu {
+    --s: 0.16s;
+    -webkit-transition: all var(--s) ease-in-out;
+    transition: all var(--s) ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    display: block !important;
+  }
+}
+@media screen and (max-width: 960px) {
+  .catalog-menu {
+    width: 200%;
+  }
+}
+.catalog-menu a {
+  display: block;
+  padding: 1.25rem 2.375rem;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 600;
+  --s: 0.16s;
+  -webkit-transition: all var(--s) ease-in-out;
+  transition: all var(--s) ease-in-out;
+}
+.catalog-menu a.active,
+.catalog-menu li:hover > a {
+  background-color: #fff;
+  color: #066c86;
+}
+
+.catalog-menu-sub {
+  display: none;
+  background-color: #fff;
+  min-width: 100%;
+}
+@media screen and (min-width: 960px) {
+  .catalog-menu-sub {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    display: block !important;
+    --s: 0.16s;
+    -webkit-transition: all var(--s) ease-in-out;
+    transition: all var(--s) ease-in-out;
+  }
+}
+
+li:hover .catalog-menu-sub {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.has-child > a {
+  position: relative;
+}
+.has-child > a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201792%201792%22%20id%3D%22chevron-up%22%3E%3Cpath%20d%3D%22M1683%201331l-166%20165q-19%2019-45%2019t-45-19l-531-531-531%20531q-19%2019-45%2019t-45-19l-166-165q-19-19-19-45.5t19-45.5l742-741q19-19%2045-19t45%2019l742%20741q19%2019%2019%2045.5t-19%2045.5z%22%2F%3E%3C%2Fsvg%3E);
+  background-size: 100%;
+  background-position: center center;
+}
+@media screen and (min-width: 960px) {
+  .has-child > a::after {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+.has-child > a.active::after {
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}

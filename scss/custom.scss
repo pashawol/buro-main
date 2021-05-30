@@ -1,0 +1,111 @@
+$output-bourbon-deprecation-warnings: false;
+// @import "mq";
+@import "bourbon/app/assets/stylesheets/bourbon"; 
+
+@import "mixin";
+@import "root";
+$form-select-indicator-color:  #000000;
+.catalog-menu-wrap{
+	position: relative;
+	.top-catalog-button{
+			@media screen and (min-width: 960px){
+
+				pointer-events: none;
+			}
+	}
+	@media screen and (max-width: 960px){
+		width: 50%;
+		.top-catalog-button{
+			width: 100%;
+		}
+	}
+	&:hover .catalog-menu{
+		z-index: 1000;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.catalog-menu{
+	position: absolute;
+	left: 0;
+	top: 100%;
+	@media screen and (min-width: 960px){
+		
+		@include mt;
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+		display: block !important;
+	}
+	display: none;
+	z-index: 1000;
+	@media screen and (max-width: 960px){
+
+		width: 200%;
+	}
+	width: 345px;
+	box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.13);
+	background-color: #f2f2f2;
+	a{
+		display: block;
+		padding: rem(20) rem(38);
+		text-transform: uppercase;
+		color: #000;
+		font-weight: 600;
+		@include mt;
+	}
+	li{
+		// position: relative;
+	}
+	a.active,
+	li:hover > a{
+		background-color: #fff;
+		color: #066c86;
+	}
+}
+.catalog-menu-sub{
+	@media screen and (min-width: 960px) {
+
+		position: absolute;
+		left: 100%;
+		top: 0;
+		visibility: hidden;
+		opacity: 0;
+		z-index: -1;
+		display: block !important;
+		@include mt;
+	}
+	display: none;
+	background-color: #fff;
+	min-width: 100%;
+}
+li:hover .catalog-menu-sub{
+	visibility: visible;
+	opacity: 1;
+	z-index: 1;
+}
+
+
+.has-child>a{
+	position: relative;
+	&::after{
+		content: '';
+		@include a-cent(y);
+		@media screen and (min-width: 960px){
+			transform: rotate(90deg);
+
+		}
+		transform: rotateX(180deg);
+		right: 20px;
+		width: 10px;
+		height: 10px;
+		background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201792%201792%22%20id%3D%22chevron-up%22%3E%3Cpath%20d%3D%22M1683%201331l-166%20165q-19%2019-45%2019t-45-19l-531-531-531%20531q-19%2019-45%2019t-45-19l-166-165q-19-19-19-45.5t19-45.5l742-741q19-19%2045-19t45%2019l742%20741q19%2019%2019%2045.5t-19%2045.5z%22%2F%3E%3C%2Fsvg%3E);
+		background-size: 100%;
+		background-position: center center;
+	} 
+	&.active{
+		&::after{
+			transform: rotateX(0);
+		}
+	}
+}
